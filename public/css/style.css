@@ -1,0 +1,496 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&family=Inter:wght@300;400;500;600&display=swap");
+/* Modern CSS Reset */
+/* Based on Josh Comeau's Custom CSS Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+  9. Remove list styles on ul, ol elements with a list role,
+  which suggests default styling will be removed
+*/
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/*
+  10. Set core root defaults
+*/
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/*
+  11. Set core body defaults
+*/
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/*
+  12. A elements that don't have a class get default styles
+*/
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/*
+  13. Make images easier to work with
+*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*
+  14. Inherit fonts for inputs and buttons
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  15. Remove all animations, transitions and smooth scroll for people that prefer not to see them
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #F7F7F7;
+  color: #484848;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-family: "WindSong", cursive;
+}
+
+.hero-title {
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.elegant-serif {
+  font-family: "WindSong", cursive;
+}
+
+.clean-sans {
+  font-family: "Inter", sans-serif;
+}
+
+/* Navigation SCSS file for multilingual site */
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+nav .nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FF5A5F;
+}
+nav .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  nav .nav-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  nav .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  nav .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+}
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  nav .hamburger {
+    display: flex;
+  }
+}
+nav .hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+nav .hamburger.active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+nav .hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+nav .hamburger.active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+nav a {
+  color: #fff;
+  margin: 0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FF5A5F;
+}
+nav a.active {
+  background: #FF5A5F;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  nav a:last-child {
+    border-bottom: none;
+  }
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.lang-switcher span {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher span {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+.lang-switcher .lang-dropdown {
+  position: relative;
+}
+.lang-switcher .lang-dropdown .lang-selected {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 80px;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.lang-switcher .lang-dropdown .lang-selected:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.lang-switcher .lang-dropdown .lang-selected::after {
+  content: "▼";
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+.lang-switcher .lang-dropdown .lang-selected.active::after {
+  transform: rotate(180deg);
+}
+.lang-switcher .lang-dropdown .lang-selected .flag-icon {
+  width: 20px;
+  height: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.lang-switcher .lang-dropdown .lang-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+.lang-switcher .lang-dropdown .lang-options.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-switcher .lang-dropdown .lang-options .lang-option {
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lang-switcher .lang-dropdown .lang-options .lang-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.lang-switcher .lang-dropdown .lang-options .lang-option.active {
+  background: #FF5A5F;
+  color: #fff;
+}
+.lang-switcher .lang-dropdown .lang-options .lang-option:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.lang-switcher .lang-dropdown .lang-options .lang-option .flag-icon {
+  width: 20px;
+  height: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body {
+  padding-top: 80px;
+}
+
+.hero {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+}
+
+/* Hero Section Styles */
+.hero {
+  height: 100vh;
+  background-image: url("/assets/images/resto1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -83px;
+  /* Counteract body padding */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-family: "WindSong", cursive;
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+.hero p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #FF5A5F;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-shadow: none;
+}
+
+.hero-btn:hover {
+  background-color: #e04e53;
+}
+
+/*# sourceMappingURL=style.css.map */

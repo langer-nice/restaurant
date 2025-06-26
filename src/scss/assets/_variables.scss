@@ -1,0 +1,41 @@
+// Color Palette
+
+// Primary Colors
+$color-coral:       #FF5A5F;   // Primary accent (buttons, highlights)
+$color-charcoal:    #484848;   // Primary text
+$color-gray:        #767676;   // Secondary text
+$color-off-white:   #F7F7F7;   // Background
+$color-white:       #FFFFFF;   // Surface elements
+
+// Secondary Accent Colors
+$color-blue:        #00A699;   // Links, secondary CTAs
+$color-gold:        #FFB400;   // Ratings, subtle highlights
+$color-mint:        #7BDED5;   // Success messages, positive feedback
+
+// Dark Mode (Optional)
+$dark-bg:           #121212;
+$dark-surface:      #2C2C2E;
+$light-text:        #EAEAEA;
+
+// Typography
+$font-base:         'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size-base:    16px;
+$font-size-sm:      14px;
+$font-size-lg:      20px;
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+// Borders & Radius
+$border-radius:     12px;
+$box-shadow:        0 4px 12px rgba(0, 0, 0, 0.1);
+
+// Spacing
+$spacing-xs:        4px;
+$spacing-sm:        8px;
+$spacing-md:        16px;
+$spacing-lg:        32px;
+
+// Z-Index
+$z-header:          1000;
+$z-modal:           1050;
+$z-overlay:         1100;

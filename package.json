@@ -1,0 +1,13 @@
+{
+  "name": "multilingual-site",
+  "version": "1.0.0",
+  "description": "Simple 2-page multilingual site (EN/FR/IT) with SCSS and client-side JS",
+  "scripts": {
+    "scss": "sass src/scss/main.scss:public/css/style.css --watch",
+    "serve": "http-server public -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "sass": "^1.89.2"
+  }
+}

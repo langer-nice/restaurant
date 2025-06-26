@@ -1,0 +1,86 @@
+/* Hero Section Styles */
+    .hero {
+      height: 100vh;
+      background-image: url('/assets/images/resto1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: -83px;
+      // margin: -2rem -2rem 2rem -2rem; 
+      /* Counteract body padding */
+    }  
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      text-align: center;
+      color: white;
+      z-index: 2;
+      position: relative;
+      max-width: 600px;
+      padding: 2rem;
+    }
+    
+    .hero h1 {
+      font-family: 'WindSong', cursive;
+      font-size: 5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      
+      @media (max-width: 768px) {
+        font-size: 3.5rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 2.8rem;
+      }
+    }
+    
+    .hero p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      line-height: 1.6;
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+    
+    .hero-btn {
+      display: inline-block;
+      background-color: #FF5A5F;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      text-shadow: none;
+    }
+    
+    .hero-btn:hover {
+      background-color: #e04e53;
+    }

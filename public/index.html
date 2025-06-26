@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="siteTitle">Multilingual Site</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="module" src="/lang.js"></script>
+  <script src="/navigation.js"></script>
+  
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">
+      <span data-i18n="siteBrand">Restaurant</span>
+    </div>
+    
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-links">
+        <a href="/index.html" data-i18n="navHome">Home</a>
+        <a href="/about.html" data-i18n="navAboutUs">About Us</a>
+      </div>
+      
+      <div class="lang-switcher">
+        <!-- <span data-i18n="navLang">Language</span>: -->
+        <div class="lang-dropdown">
+          <div class="lang-selected" id="langSelected">
+            <img class="flag-icon" id="selectedFlag" src="/assets/images/flag-gb.svg" alt="Selected language flag">
+            <span class="selected-lang">EN</span>
+          </div>
+          <div class="lang-options" id="langOptions">
+            <div class="lang-option" data-lang="en" data-flag="/assets/images/flag-gb.svg">
+              <img class="flag-icon" src="/assets/images/flag-gb.svg" alt="UK flag">
+              English
+            </div>
+            <div class="lang-option" data-lang="fr" data-flag="/assets/images/flag-fr.svg">
+              <img class="flag-icon" src="/assets/images/flag-fr.svg" alt="French flag">
+              Français
+            </div>
+            <div class="lang-option" data-lang="it" data-flag="/assets/images/flag-it.svg">
+              <img class="flag-icon" src="/assets/images/flag-it.svg" alt="Italian flag">
+              Italiano
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="heroTitle">Welcome to Our Restaurant</h1>
+      <p data-i18n="heroSubtitle">Experience exceptional dining with authentic flavors and warm hospitality</p>
+      <a href="#menu" class="hero-btn" data-i18n="heroButton">View Menu</a>
+    </div>
+  </section>
+  
+  <div class="container" id="main-content">
+    <!-- Home Page Content -->
+    <h1 data-i18n="homeHeading"></h1>
+    <p data-i18n="homeContent"></p>
+    <p data-i18n="homeWelcome"></p>
+    
+    <!-- Restaurant Features Section -->
+    <section class="features">
+      <h2 data-i18n="featuresHeading">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3 data-i18n="feature1Title">Fresh Ingredients</h3>
+          <p data-i18n="feature1Description">We source the finest local ingredients to create authentic flavors that celebrate our culinary heritage.</p>
+        </div>
+        <div class="feature-card">
+          <h3 data-i18n="feature2Title">Expert Chefs</h3>
+          <p data-i18n="feature2Description">Our experienced chefs bring decades of expertise and passion to every dish they create.</p>
+        </div>
+        <div class="feature-card">
+          <h3 data-i18n="feature3Title">Warm Atmosphere</h3>
+          <p data-i18n="feature3Description">Enjoy your meal in our welcoming environment designed for memorable dining experiences.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="siteTitle">Multilingual Site</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="module" src="/lang.js"></script>
+  <script src="/navigation.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">
+      <span data-i18n="siteBrand">Restaurant</span>
+    </div>
+    
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-links">
+        <a href="/index.html" data-i18n="navHome">Home</a>
+        <a href="/about.html" data-i18n="navAboutUs">About Us</a>
+      </div>
+      
+      <div class="lang-switcher">
+        <!-- <span data-i18n="navLang">Language</span>: -->
+        <div class="lang-dropdown">
+          <div class="lang-selected" id="langSelected">
+            <img class="flag-icon" id="selectedFlag" src="/assets/images/flag-gb.svg" alt="Selected language flag">
+            <span class="selected-lang">EN</span>
+          </div>
+          <div class="lang-options" id="langOptions">
+            <div class="lang-option" data-lang="en" data-flag="/assets/images/flag-gb.svg">
+              <img class="flag-icon" src="/assets/images/flag-gb.svg" alt="UK flag">
+              English
+            </div>
+            <div class="lang-option" data-lang="fr" data-flag="/assets/images/flag-fr.svg">
+              <img class="flag-icon" src="/assets/images/flag-fr.svg" alt="French flag">
+              Français
+            </div>
+            <div class="lang-option" data-lang="it" data-flag="/assets/images/flag-it.svg">
+              <img class="flag-icon" src="/assets/images/flag-it.svg" alt="Italian flag">
+              Italiano
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="container" id="main-content">
+    <!-- About Us Content -->
+    <h1 data-i18n="aboutUsHeading">About Our Restaurant</h1>
+    <p data-i18n="aboutUsContent">Welcome to our family-owned restaurant where tradition meets innovation. We've been serving authentic, delicious cuisine for over two decades.</p>
+    <h2 data-i18n="aboutUsStoryHeading">Our Story</h2>
+    <p data-i18n="aboutUsStory">Founded in 2001, our restaurant began as a small family dream to share the authentic flavors of our heritage with the community. What started as a modest establishment has grown into a beloved local landmark, yet we've never lost sight of our core values: quality ingredients, traditional recipes, and warm hospitality.</p>
+    <h2 data-i18n="aboutUsTeamHeading">Our Team</h2>
+    <p data-i18n="aboutUsTeam">Our passionate team of chefs and staff work tirelessly to ensure every meal is an unforgettable experience. From our head chef who trained in the finest kitchens to our friendly waitstaff who treat every guest like family, we're committed to excellence in every aspect of your dining experience.</p>
+  </div>
+</body>
+</html>
