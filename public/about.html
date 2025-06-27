@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="siteTitle">Multilingual Site</title>
-  <link rel="stylesheet" href="/css/style.css" />
-  <script type="module" src="/lang.js"></script>
-  <script src="/navigation.js"></script>
-  <script src="/contact-nav.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script type="module" src="/assets/js/lang.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/contact-nav.js"></script>
 </head>
 <body>
   <nav>
     <div class="nav-brand">
-      <span data-i18n="siteBrand">Restaurant</span>
+      <span data-i18n="siteBrand"><a href="/index.html">L'Atelier des Saveurs</a></span>
     </div>
     
     <div class="nav-menu" id="navMenu">
@@ -53,14 +53,30 @@
       <span></span>
     </div>
   </nav>
-  <div class="container" id="main-content">
-    <!-- About Us Content -->
+  <div class="container" id="content-about">
+    <div class="container-inner">
+      <!-- About Us Content -->
     <h1 data-i18n="aboutUsHeading">About Our Restaurant</h1>
     <p data-i18n="aboutUsContent">Welcome to our family-owned restaurant where tradition meets innovation. We've been serving authentic, delicious cuisine for over two decades.</p>
     <h2 data-i18n="aboutUsStoryHeading">Our Story</h2>
     <p data-i18n="aboutUsStory">Founded in 2001, our restaurant began as a small family dream to share the authentic flavors of our heritage with the community. What started as a modest establishment has grown into a beloved local landmark, yet we've never lost sight of our core values: quality ingredients, traditional recipes, and warm hospitality.</p>
     <h2 data-i18n="aboutUsTeamHeading">Our Team</h2>
     <p data-i18n="aboutUsTeam">Our passionate team of chefs and staff work tirelessly to ensure every meal is an unforgettable experience. From our head chef who trained in the finest kitchens to our friendly waitstaff who treat every guest like family, we're committed to excellence in every aspect of your dining experience.</p>
+    </div>
+    
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p data-i18n="footerText">© 2025 Restaurant. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" data-i18n="footerFacebook">Facebook</a>
+        <a href="#" data-i18n="footerTwitter">Twitter</a>
+        <a href="#" data-i18n="footerInstagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,12 +1,12 @@
+@use "assets/variables" as *;
 @use "assets/reset";
 @use "assets/base";
 @use "assets/navigation";
-@use "assets/variables";   
 @use "assets/hero";
+@use "assets/menu-modal";
 @use "assets/contact";
-@use "assets/footer";
-
-// body {
-//     background-color: variables.$color-off-white;
-// }
-
+@use "assets/footer"; 
+@use "assets/intro";
+@use "assets/structure";
+@use "assets/food";
+@use "assets/testimonial";

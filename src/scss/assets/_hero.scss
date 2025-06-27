@@ -10,9 +10,42 @@
       justify-content: center;
       position: relative;
       margin-top: -83px;
+      overflow: hidden; /* Prevent overflow during animation */
       // margin: -2rem -2rem 2rem -2rem; 
       /* Counteract body padding */
+      
+      /* Zoom animation for background */
+      &::after {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background-image: url('/assets/images/resto1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: heroZoom 20s ease-in-out infinite;
+        z-index: 0;
+      }
     }  
+    
+    /* Zoom and pan keyframes animation */
+    @keyframes heroZoom {
+      0%, 100% {
+        transform: scale(1) translateX(0);
+      }
+      25% {
+        transform: scale(1.05) translateX(-2%);
+      }
+      50% {
+        transform: scale(1.1) translateX(-4%);
+      }
+      75% {
+        transform: scale(1.05) translateX(-2%);
+      }
+    }
     
     .hero::before {
       content: '';
@@ -30,12 +63,13 @@
       color: white;
       z-index: 2;
       position: relative;
-      max-width: 600px;
+      max-width: 1000px;
       padding: 2rem;
     }
+
     
     .hero h1 {
-      font-family: 'WindSong', cursive;
+      font-family: 'Cinzel', serif;
       font-size: 5rem;
       font-weight: 500;
       margin-bottom: 1rem;
@@ -69,18 +103,57 @@
       }
     }
     
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+      }
+    }
+    
     .hero-btn {
       display: inline-block;
-      background-color: #FF5A5F;
-      color: white;
       padding: 12px 30px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       text-shadow: none;
-    }
-    
-    .hero-btn:hover {
-      background-color: #e04e53;
+      text-align: center;
+      min-width: 140px;
+      
+      @media (max-width: 480px) {
+        width: 100%;
+        max-width: 250px;
+      }
+      
+      &.primary {
+        background-color: #FF5A5F;
+        color: white;
+        
+        &:hover {
+          background-color: #e04e53;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 90, 95, 0.3);
+        }
+      }
+      
+      &.secondary {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        
+        &:hover {
+          background-color: white;
+          color: #333;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+      }
     }

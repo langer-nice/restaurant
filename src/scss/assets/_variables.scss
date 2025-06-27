@@ -12,6 +12,12 @@ $color-blue:        #00A699;   // Links, secondary CTAs
 $color-gold:        #FFB400;   // Ratings, subtle highlights
 $color-mint:        #7BDED5;   // Success messages, positive feedback
 
+// Semantic color mappings for easier use
+$color-primary:     $color-coral;
+$color-accent:      $color-gold;
+$color-text:        $color-charcoal;
+$color-text-light:  $color-gray;
+
 // Dark Mode (Optional)
 $dark-bg:           #121212;
 $dark-surface:      #2C2C2E;
@@ -19,6 +25,7 @@ $light-text:        #EAEAEA;
 
 // Typography
 $font-base:         'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-heading:      'Georgia', 'Times New Roman', serif;
 $font-size-base:    16px;
 $font-size-sm:      14px;
 $font-size-lg:      20px;

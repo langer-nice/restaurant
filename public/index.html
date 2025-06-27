@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="siteTitle">Multilingual Site</title>
-  <link rel="stylesheet" href="/css/style.css" />
-  <script src="/contact-nav.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/contact-nav.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="module" src="/lang.js"></script>
-  <script src="/navigation.js"></script>
-  <script src="/contact.js"></script>
+  <script type="module" src="/assets/js/lang.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/contact.js"></script>
+  <script src="/assets/js/testimonial-carousel.js"></script>
+  <script src="/assets/js/menu-modal.js"></script>
   
 </head>
 <body>
@@ -62,17 +64,46 @@
     <div class="hero-content">
       <h1 data-i18n="heroTitle">Welcome to Our Restaurant</h1>
       <p data-i18n="heroSubtitle">Experience exceptional dining with authentic flavors and warm hospitality</p>
-      <a href="#menu" class="hero-btn" data-i18n="heroButton">View Menu</a>
+      <div class="hero-buttons">
+        <a href="#" class="hero-btn primary" data-i18n="heroMenu" id="menuButton">View Menu</a>
+        <a href="#contact" class="hero-btn secondary" data-i18n="heroReserveButton">Reserve Table</a>
+      </div>
     </div>
   </section>
+
+  <!-- Menu Modal Overlay -->
+  <div class="menu-modal" id="menuModal">
+    <div class="menu-modal-content">
+      <div class="menu-modal-header">
+        <h2 data-i18n="menuModalTitle">Our Menu</h2>
+        <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="pdf-container">
+          <iframe 
+            src="/assets/docs/pdflatex-4-pages.pdf" 
+            type="application/pdf"
+            title="L'Atelier des Saveurs Menu PDF"
+            class="menu-pdf">
+          </iframe>
+        </div>
+        <div class="menu-fallback">
+          <p data-i18n="menuFallbackText">Unable to display PDF? 
+            <a href="/assets/docs/pdflatex-4-pages.pdf" target="_blank" data-i18n="menuDownloadLink">Download Menu</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <div class="container" id="main-content">
-    <!-- Home Page Content -->
+  <div class="intro-section" id="intro">
+    <div class="intro-container">
+<!-- Home Page Content -->
     <h1 data-i18n="homeHeading"></h1>
     <p data-i18n="homeContent"></p>
     <p data-i18n="homeWelcome"></p>
     
-    <!-- Restaurant Features Section -->
+    <!-- L'Atelier des Saveurs Features Section -->
     <section class="features">
       <h2 data-i18n="featuresHeading">Why Choose Us</h2>
       <div class="features-grid">
@@ -90,7 +121,88 @@
         </div>
       </div>
     </section>
+    </div>    
   </div>
+
+  <!-- Food Section -->
+  <section class="food-section">
+    <div class="food-container">
+      <div class="food-header">
+        <h2 data-i18n="foodHeading">Our Signature Dishes</h2>
+        <p data-i18n="foodSubtext">Discover our carefully crafted menu featuring traditional recipes with a modern twist</p>
+      </div>
+      
+      <div class="food-grid">
+        <!-- Food items will be added here -->
+      </div>
+      
+      <div class="food-cta">
+        <a href="#contact" class="food-btn" data-i18n="foodButton">Reserve Your Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonials-container">
+      <div class="testimonials-header">
+        <h2 data-i18n="testimonialsHeading">What Our Guests Say</h2>
+        <p data-i18n="testimonialsSubtext">Read what our valued customers have to say about their dining experience</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonial1Text">"An absolutely wonderful dining experience! The food was exceptional and the service was impeccable. We'll definitely be returning soon."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 data-i18n="testimonial1Name">Sarah Johnson</h4>
+              <span data-i18n="testimonial1Location">Nice, France</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonial2Text">"The authentic flavors and warm atmosphere make this restaurant truly special. Every dish was a masterpiece!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 data-i18n="testimonial2Name">Marco Rossi</h4>
+              <span data-i18n="testimonial2Location">Monaco</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="stars">★★★★★</div>
+            <p data-i18n="testimonial3Text">"From the moment we walked in, we felt welcomed. The chef's attention to detail is remarkable, and the ambiance is perfect."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 data-i18n="testimonial3Name">Elena Dubois</h4>
+              <span data-i18n="testimonial3Location">Cannes, France</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Carousel Navigation (Mobile Only) -->
+      <div class="testimonial-indicators">
+        <button class="carousel-nav" id="testimonial-prev" aria-label="Previous testimonial">‹</button>
+        <div class="carousel-dots">
+          <div class="carousel-dot active" data-slide="0"></div>
+          <div class="carousel-dot" data-slide="1"></div>
+          <div class="carousel-dot" data-slide="2"></div>
+        </div>
+        <button class="carousel-nav" id="testimonial-next" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
@@ -155,7 +267,7 @@
           allowfullscreen="" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade"
-          title="Restaurant Location Map">
+          title="L'Atelier des Saveurs Location Map">
         </iframe>
       </div>
       <div class="address-info">
@@ -168,7 +280,11 @@
   <!-- Footer  -->
    <footer>
     <div class="footer-content">
-      <p data-i18n="footerText">© 2023 Restaurant. All rights reserved.</p>
+      <div class="address-info">
+        <div class="address" data-i18n="contactAddress">12 rue de Maeyer</div>
+        <!-- <div class="city" data-i18n="contactCity">Nice 06300, France</div> -->
+      </div>
+      <p data-i18n="footerText">© 2025 Restaurant. All rights reserved.</p>
       <div class="social-links">
         <a href="#" data-i18n="footerFacebook">Facebook</a>
         <a href="#" data-i18n="footerTwitter">Twitter</a>
