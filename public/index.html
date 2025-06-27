@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="siteTitle">Multilingual Site</title>
   <link rel="stylesheet" href="/css/style.css" />
+  <script src="/contact-nav.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="module" src="/lang.js"></script>
   <script src="/navigation.js"></script>
+  <script src="/contact.js"></script>
   
 </head>
 <body>
@@ -19,6 +22,7 @@
       <div class="nav-links">
         <a href="/index.html" data-i18n="navHome">Home</a>
         <a href="/about.html" data-i18n="navAboutUs">About Us</a>
+        <a href="#contact" data-i18n="navContact" id="contactLink">Contact</a>
       </div>
       
       <div class="lang-switcher">
@@ -87,5 +91,91 @@
       </div>
     </section>
   </div>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-content">
+        <h2 data-i18n="contactHeading">Get In Touch</h2>
+        <p data-i18n="contactSubtext">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="icon">📍</span>
+            <span data-i18n="contactAddress">12 rue de Maeyer, Nice 06300</span>
+          </div>
+          <div class="info-item">
+            <span class="icon">📞</span>
+            <span data-i18n="contactPhone">+33 4 93 XX XX XX</span>
+          </div>
+          <div class="info-item">
+            <span class="icon">✉️</span>
+            <span data-i18n="contactEmail">contact@restaurant.com</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <h3 data-i18n="contactFormTitle">Send us a Message</h3>
+          
+          <div class="form-group">
+            <label for="name" data-i18n="contactNameLabel">Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" data-i18n="contactPhoneLabel">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" data-i18n="contactEmailLabel">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="comments" data-i18n="contactCommentsLabel">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Tell us about your inquiry..."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn" data-i18n="contactSubmitBtn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="map-container">
+      <h3 data-i18n="mapHeading">Find Us</h3>
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.0645424431047!2d7.2617537155963725!3d43.70340647912048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12dd2b1b0e95fe9b%3A0x1d1f93a1c9c4f8e2!2s12%20Rue%20de%20Maeyer%2C%2006300%20Nice%2C%20France!5e0!3m2!1sen!2sus!4v1672340891234!5m2!1sen!2sus"
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Restaurant Location Map">
+        </iframe>
+      </div>
+      <div class="address-info">
+        <div class="address" data-i18n="contactAddress">12 rue de Maeyer</div>
+        <div class="city" data-i18n="contactCity">Nice 06300, France</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+   <footer>
+    <div class="footer-content">
+      <p data-i18n="footerText">© 2023 Restaurant. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" data-i18n="footerFacebook">Facebook</a>
+        <a href="#" data-i18n="footerTwitter">Twitter</a>
+        <a href="#" data-i18n="footerInstagram">Instagram</a>
+      </div>
+    </div>
+   </footer>
+
 </body>
 </html>

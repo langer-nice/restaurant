@@ -15,6 +15,7 @@
   "aboutUsTeam": "Our passionate team of chefs and staff work tirelessly to ensure every meal is an unforgettable experience. From our head chef who trained in the finest kitchens to our friendly waitstaff who treat every guest like family, we're committed to excellence in every aspect of your dining experience.",
   "navHome": "Home",
   "navAboutUs": "About",
+  "navContact": "Contact",
   "navLang": "Language",
   "featuresHeading": "Why Choose Us",
   "feature1Title": "Fresh Ingredients",
@@ -22,5 +23,18 @@
   "feature2Title": "Expert Chefs",
   "feature2Description": "Our experienced chefs bring decades of expertise and passion to every dish they create.",
   "feature3Title": "Warm Atmosphere",
-  "feature3Description": "Enjoy your meal in our welcoming environment designed for memorable dining experiences."
+  "feature3Description": "Enjoy your meal in our welcoming environment designed for memorable dining experiences.",
+  "contactHeading": "Get In Touch",
+  "contactSubtext": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+  "contactAddress": "12 rue de Maeyer, Nice 06300",
+  "contactPhone": "+33 4 93 XX XX XX",
+  "contactEmail": "contact@restaurant.com",
+  "contactFormTitle": "Send us a Message",
+  "contactNameLabel": "Name",
+  "contactPhoneLabel": "Phone",
+  "contactEmailLabel": "Email",
+  "contactCommentsLabel": "Comments",
+  "contactSubmitBtn": "Send Message",
+  "mapHeading": "Find Us",
+  "contactCity": "Nice 06300, France"
 }

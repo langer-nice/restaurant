@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
+                // Close mobile menu
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });

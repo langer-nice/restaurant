@@ -73,9 +73,16 @@ function updateLangSwitcher(currentLang) {
 
 function updateNavLinks(currentLang) {
   document.querySelectorAll('nav a[data-i18n]').forEach(link => {
-    const url = new URL(link.getAttribute('href'), window.location.origin);
+    const href = link.getAttribute('href');
+    
+    // Skip hash-only links (like #contact)
+    if (href.startsWith('#')) {
+      return;
+    }
+    
+    const url = new URL(href, window.location.origin);
     url.searchParams.set('lang', currentLang);
-    link.setAttribute('href', url.pathname + url.search);
+    link.setAttribute('href', url.pathname + url.search + url.hash);
   });
 }
 

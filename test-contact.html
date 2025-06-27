@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Link Test</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        nav { background: #333; color: white; padding: 1rem; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        nav a { color: white; margin-right: 1rem; text-decoration: none; }
+        .content { margin-top: 60px; padding: 2rem; height: 200vh; }
+        #contact { background: #f0f0f0; padding: 2rem; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#contact" onclick="scrollToContact(event)">Contact</a>
+    </nav>
+    
+    <div class="content">
+        <h1>Test Page</h1>
+        <p>Scroll down to see contact section...</p>
+        
+        <div id="contact">
+            <h2>Contact Section</h2>
+            <p>This is the contact section!</p>
+        </div>
+    </div>
+    
+    <script>
+        function scrollToContact(e) {
+            console.log('Contact link clicked');
+            e.preventDefault();
+            
+            const contactSection = document.getElementById('contact');
+            console.log('Contact section found:', contactSection);
+            
+            if (contactSection) {
+                const navHeight = 60; // Fixed nav height
+                const targetPosition = contactSection.offsetTop - navHeight - 20;
+                console.log('Scrolling to:', targetPosition);
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+</body>
+</html>

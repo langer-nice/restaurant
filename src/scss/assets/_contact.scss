@@ -1,0 +1,225 @@
+/* Contact Section Styles */
+.contact-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 80px 0 0; // Account for fixed nav
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 1rem;
+    }
+  }
+  
+  .contact-content {
+    h2 {
+      font-size: 2.5rem;
+      color: #484848;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+    
+    p {
+      font-size: 1.1rem;
+      color: #767676;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    
+    .contact-info {
+      margin-bottom: 2rem;
+      
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #484848;
+        
+        .icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 1rem;
+          color: #FF5A5F;
+          font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  .contact-form-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    .form-message {
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      
+      &.success {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      
+      &.error {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+    }
+    
+    .contact-form {
+      h3 {
+        font-size: 1.5rem;
+        color: #484848;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+        
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          color: #484848;
+          font-weight: 500;
+          font-size: 0.9rem;
+        }
+        
+        input,
+        textarea {
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: 2px solid #e9ecef;
+          border-radius: 8px;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          background: #fff;
+          
+          &:focus {
+            outline: none;
+            border-color: #FF5A5F;
+            box-shadow: 0 0 0 3px rgba(255, 90, 95, 0.1);
+          }
+          
+          &::placeholder {
+            color: #adb5bd;
+          }
+        }
+        
+        textarea {
+          resize: vertical;
+          min-height: 120px;
+          font-family: inherit;
+        }
+      }
+      
+      .submit-btn {
+        width: 100%;
+        background: #FF5A5F;
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: #e04e53;
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(255, 90, 95, 0.3);
+        }
+        
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+// Map section
+.map-section {
+  min-height: 60vh;
+  background: #f8f9fa;
+  padding: 4rem 0;
+  
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+    h3 {
+      font-size: 2rem;
+      color: #484848;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    .map-wrapper {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      height: 400px;
+      
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+    
+    .address-info {
+      text-align: center;
+      margin-top: 2rem;
+      
+      .address {
+        font-size: 1.1rem;
+        color: #484848;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      
+      .city {
+        font-size: 1rem;
+        color: #767676;
+      }
+    }
+  }
+}
