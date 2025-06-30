@@ -42,6 +42,7 @@ function setupContactLinks() {
             if (href === '#contact') {
                 console.log('📍 Same page contact link detected');
                 e.preventDefault();
+                sessionStorage.setItem('contactIntended', 'true');
                 scrollToContact();
             }
         });
@@ -52,9 +53,14 @@ function setupContactLinks() {
 
 // Check for contact hash on page load
 function checkContactHash() {
-    if (window.location.hash === '#contact') {
-        console.log('🎯 Contact hash detected');
+    // Only scroll to contact if the hash was explicitly set (not from language switching)
+    if (window.location.hash === '#contact' && !document.referrer.includes(window.location.hostname)) {
+        console.log('🎯 Contact hash detected from external source');
         setTimeout(scrollToContact, 300);
+    } else if (window.location.hash === '#contact' && sessionStorage.getItem('contactIntended') === 'true') {
+        console.log('🎯 Contact hash detected from intended navigation');
+        setTimeout(scrollToContact, 300);
+        sessionStorage.removeItem('contactIntended');
     }
 }
 
