@@ -2,9 +2,9 @@
 cd /Users/davidlang/windsurf/restaurant
 npm run scss
 
-# Icons : Material icons
-<i class="material-icons">phone</i>
-https://fonts.google.com/icons 
+# Icons : Font Awesome
+<i class="fas fa-phone"></i>
+https://fontawesome.com/search s
 
 # SERVER 
 cd /Users/davidlang/windsurf/restaurant && npm run serve
