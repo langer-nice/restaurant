@@ -41,3 +41,5 @@ logs
 
 # CSS source maps (optional - remove if you want to track them)
 *.css.map
+
+mcp.json 
