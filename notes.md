@@ -1,3 +1,14 @@
+# navigation 
+Enleve le logo
+Bgrd transparent quand fermé
+
+# footer
+Sociaux media icons trop petit pour cliquer
+
+# index
+Premier section pas bien aligner
+
+
 # SCSS
 cd /Users/davidlang/windsurf/restaurant
 npm run scss
