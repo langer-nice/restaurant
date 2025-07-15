@@ -39,4 +39,6 @@ https://www.udemy.com/course/vibe-coding-with-windsurf-web-design-with-no-code-b
 
 
 # Host on Vercel
+https://vercel.com/david-lang/latelierdesaveurs
+
 https://www.udemy.com/course/vibe-coding-with-windsurf-web-design-with-no-code-beginners/learn/lecture/50181387#overview

@@ -1,21 +1,18 @@
 /* Contact Section Styles */
 .contact-section {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 80px 0 0; // Account for fixed nav
-  display: flex;
-  align-items: center;
+  padding: 80px 0;
+  background: #fff;
   position: relative;
+  text-align: center;
   
   .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    // align-items: center;
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -25,11 +22,14 @@
   }
   
   .contact-content {
+    text-align: left;
+    
     h2 {
+      font-family: 'Cinzel', serif;
       font-size: 2.5rem;
-      color: #484848;
+      color: #333;
       margin-bottom: 1rem;
-      font-weight: 700;
+      font-weight: 600;
       
       @media (max-width: 768px) {
         font-size: 2rem;
@@ -100,6 +100,7 @@
     
     .contact-form {
       h3 {
+        font-family: 'Cinzel', serif;
         font-size: 1.5rem;
         color: #484848;
         margin-bottom: 1.5rem;
@@ -109,6 +110,7 @@
       
       .form-group {
         margin-bottom: 1.5rem;
+        text-align: left;
         
         label {
           display: block;
