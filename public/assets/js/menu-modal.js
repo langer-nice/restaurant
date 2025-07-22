@@ -97,7 +97,7 @@ class MenuModal {
     }, 100);
 
     // Add loading indicator
-    this.showLoading();
+    // this.showLoading();
   }
 
   closeModal() {

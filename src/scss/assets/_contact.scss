@@ -179,11 +179,13 @@
   min-height: 60vh;
   background: #f8f9fa;
   padding: 4rem 0;
+  display: flex;
   
   .map-container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 2rem; 
     
     h3 {
       font-size: 2rem;

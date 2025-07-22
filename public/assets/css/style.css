@@ -459,7 +459,7 @@ body {
 /* Hero Section Styles */
 .hero {
   height: 100vh;
-  background-image: url("/assets/images/resto1.jpg");
+  background-image: url("/assets/images/hero-restaurant.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -479,7 +479,7 @@ body {
   left: -10%;
   width: 120%;
   height: 120%;
-  background-image: url("/assets/images/resto1.jpg");
+  background-image: url("/assets/images/hero-restaurant.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -972,9 +972,11 @@ body {
   min-height: 60vh;
   background: #f8f9fa;
   padding: 4rem 0;
+  display: flex;
 }
 .map-section .map-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
 }
