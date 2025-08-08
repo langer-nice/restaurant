@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+#content-about {
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+    //   color: $color-text;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+    //   color: $color-text;;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+}

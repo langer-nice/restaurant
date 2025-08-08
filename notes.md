@@ -1,9 +1,3 @@
-# navigation 
-Enleve le logo
-Bgrd transparent quand fermé
-
-# footer
-Sociaux media icons trop petit pour cliquer
 
 # index
 Premier section pas bien aligner
@@ -11,7 +5,7 @@ Premier section pas bien aligner
 
 # SCSS
 cd /Users/davidlang/windsurf/restaurant
-npm run scss
+sass src/scss/main.scss public/assets/css/style.css --watch
 
 # Icons : Font Awesome
 <i class="fas fa-phone"></i>

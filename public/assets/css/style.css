@@ -149,7 +149,7 @@ h1 {
 
 /* Navigation SCSS file for multilingual site */
 nav {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 1rem;
@@ -163,9 +163,15 @@ nav {
   right: 0;
   width: 100%;
 }
+@media (max-width: 768px) {
+  nav {
+    overflow: visible;
+  }
+}
 nav .nav-brand {
   font-size: 1.5rem;
   color: white;
+  z-index: 1002;
 }
 nav .nav-brand a {
   color: inherit;
@@ -174,7 +180,7 @@ nav .nav-brand a {
 }
 nav .nav-brand a:hover {
   color: inherit;
-  opacity: 0.8;
+  background: none;
 }
 nav .nav-menu {
   display: flex;
@@ -187,22 +193,23 @@ nav .nav-menu {
 @media (max-width: 768px) {
   nav .nav-menu {
     position: fixed;
-    top: 100%;
+    top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem 1rem;
-    gap: 1rem;
-    transform: translateY(-100%);
+    gap: 2rem;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 1001;
   }
   nav .nav-menu.active {
-    transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
@@ -215,8 +222,10 @@ nav .nav-links {
 @media (max-width: 768px) {
   nav .nav-links {
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    gap: 1.5rem;
+    width: auto;
+    align-items: center;
+    justify-content: center;
   }
 }
 nav .hamburger {
@@ -227,7 +236,7 @@ nav .hamburger {
   height: 20px;
   justify-content: space-between;
   position: relative;
-  z-index: 1002;
+  z-index: 1003;
 }
 @media (max-width: 768px) {
   nav .hamburger {
@@ -270,10 +279,11 @@ nav a.active {
 }
 @media (max-width: 768px) {
   nav a {
-    width: 100%;
+    width: auto;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 150px;
   }
   nav a:last-child {
     border-bottom: none;
@@ -289,10 +299,11 @@ nav a.active {
 @media (max-width: 768px) {
   .lang-switcher {
     flex-direction: column;
-    width: 100%;
+    width: auto;
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
   }
 }
 .lang-switcher span {
@@ -380,6 +391,7 @@ nav a.active {
     transform: none;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
     flex-wrap: wrap;
@@ -1051,8 +1063,16 @@ footer {
   display: flex;
   gap: 15px;
 }
+@media (max-width: 768px) {
+  .social-links {
+    margin-top: 1rem;
+  }
+}
 .social-links a {
   transition: color 0.3s;
+}
+.social-links a i {
+  font-size: 1.5rem;
 }
 .social-links a:hover {
   color: #FF5A5F;
@@ -1101,8 +1121,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  border-radius: 8px;
-  background-color: #fff;
 }
 
 #content-about {
@@ -1133,7 +1151,7 @@ footer {
 .features-section .features-header h2 {
   font-family: "Cinzel", serif;
   font-size: 2.5rem;
-  color: #333;
+  color: #484848;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -1633,6 +1651,21 @@ footer {
     grid-template-columns: 1fr;
     gap: 25px;
   }
+}
+#content-about h1 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+#content-about h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#content-about p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

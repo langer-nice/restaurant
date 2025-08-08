@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /* Features Section Styles */
 .features-section {
   padding: 80px 0;
@@ -22,7 +24,7 @@
     h2 {
       font-family: 'Cinzel', serif;
       font-size: 2.5rem;
-      color: #333;
+      color: $color-charcoal;
       margin-bottom: 1rem;
       font-weight: 600;
       

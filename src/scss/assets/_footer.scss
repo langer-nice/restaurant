@@ -40,9 +40,17 @@ footer {
     display: flex;
     gap: 15px;
 
+    @media (max-width: 768px) {
+        margin-top: 1rem;
+    }
+
     a {
         // color: #fff;
         transition: color 0.3s;
+
+        i {
+            font-size: 1.5rem;
+        }
 
         &:hover {
             color: $color-coral;
