@@ -1,6 +1,4 @@
 
-# index
-Premier section pas bien aligner
 
 
 # SCSS

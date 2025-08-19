@@ -25,7 +25,7 @@ footer {
     }
 
     & a {
-        color: $color-coral;
+        color: white;
         text-decoration: none;
         margin: 0 10px;
         font-weight: 500;
@@ -52,8 +52,8 @@ footer {
             font-size: 1.5rem;
         }
 
-        &:hover {
-            color: $color-coral;
+        &:hover { 
+            // color: $color-coral; 
         }
     }
 } 
