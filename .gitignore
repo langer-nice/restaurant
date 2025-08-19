@@ -43,3 +43,4 @@ logs
 *.css.map
 
 mcp.json 
+.vercel
